@@ -1,0 +1,23 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body takes up full height of the viewport */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Set the canvas to fill the entire window */
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block; /* Removes extra space below canvas */
+}

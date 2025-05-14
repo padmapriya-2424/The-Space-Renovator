@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Floor Plan</title>
+    <link rel="stylesheet" href="/css/search_floor.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Existing Floor Plan</h1>
+        
+        <!-- Search Section -->
+        <div class="search-section">
+            <input type="text" id="search-floor-plan" placeholder="Enter Building Name or Address" class="input-field">
+            <button class="input-btn" onclick="searchFloorPlan()">Search</button>
+        </div>
+
+        <div id="search-result" class="hidden">
+            <h2>Search Results</h2>
+            <div id="results-container">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+
+        <button id="next-btn" class="hidden" onclick="goNext()">Next</button>
+    </div>
+
+    <div class="background-effects">
+        <div class="circle" style="width: 100px; height: 100px; top: 15%; left: 10%; animation-duration: 6s;"></div>
+        <div class="circle" style="width: 150px; height: 150px; top: 35%; left: 85%; animation-duration: 10s;"></div>
+        <div class="circle" style="width: 80px; height: 80px; top: 75%; left: 25%; animation-duration: 8s;"></div>
+        <div class="circle" style="width: 90px; height: 90px; top: 35%; left: 30%; animation-duration: 6s;"></div>
+        <div class="circle" style="width: 120px; height: 120px; top: 60%; left: 70%; animation-duration: 10s;"></div>
+        <div class="circle" style="width: 70px; height: 70px; top: 90%; left: 45%; animation-duration: 8s;"></div>  
+    </div>
+
+    <script src="/js/search_floor.js"></script>
+</body>
+</html>

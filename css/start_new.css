@@ -1,0 +1,144 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    background: linear-gradient(145deg, #02353C 60%, #ac2bc0);
+    color: #C1F6ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 60%;
+    max-width: 600px;
+}
+
+/* Headings */
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Option Buttons */
+.option-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option-btn, .user-btn, .input-btn, #next-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+/* Primary Buttons */
+.option-btn {
+    background: #C1F6ED;
+    color: #02353C;
+}
+
+.option-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Selected State */
+.selected {
+    background: #7422A7 !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* User Type Selection */
+.grid-layout {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.user-btn {
+    background: #C1F6ED;
+    color: #02353C;
+    font-size: 16px;
+}
+
+.user-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Input Options */
+.input-btn {
+    background: #C1F6ED;
+    color: #02353C;
+}
+
+.input-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Button Size Variations */
+.small {
+    width: 120px;
+}
+
+.medium {
+    width: 160px;
+}
+
+.large {
+    width: 200px;
+}
+
+/* Next Button */
+#next-btn {
+    display: block;
+    margin: 20px auto;
+    background: #3FD0C9;
+    color: #02353C;
+}
+
+#next-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Hide Elements Initially */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .grid-layout {
+        flex-direction: column;
+    }
+}

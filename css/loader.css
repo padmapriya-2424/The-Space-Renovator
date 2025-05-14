@@ -1,0 +1,45 @@
+/* Loader Page Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(140deg, #02353C 40%, #ac2bc0 200%);
+    font-family: 'Poppins', sans-serif;
+    color: #E7EDC8;
+    text-align: center;
+}
+
+.loader-container {
+    background-color: #0b3d40;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #5688b9;
+    font-weight: 600;
+}
+
+p {
+    margin-top: 10px;
+    color: #658dba;
+    font-size: 14px;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid #2EAF7D;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

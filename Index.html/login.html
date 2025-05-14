@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Space Renovator - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="/js/login.js" defer></script>
+  <link rel="stylesheet" href="/css/login.css"> 
+</head>
+<body>
+    <div class="login-container">
+        <div class="image-section">
+            <img src="/assets/login_image.jpg" alt="The Space Renovator Logo" class="logo-image">
+        </div>
+        <div class="form-section">
+            <h2>Log In To Your Account</h2>
+            <p>Check your order status, update your billing info, and review past purchases.</p>
+            <form id="login-form" onsubmit="event.preventDefault(); login();">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            <div class="form-footer">
+<!-- Button to resend verification email -->
+                <button id="resend-verification-btn" style="display: none;" onclick="resendVerification()">Resend Verification Email</button>
+                <a href="/Index.html/forgot_password.html">Forgot Password?</a> | <a href="/Index.html/signup.html">Sign Up</a>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* General Styling for the About Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #02353C 60%, #ac2bc0);
+    color: #C1F6ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* About Screen Title */
+h2 {
+    font-size: 2.5rem;
+    color: #C1F6ED;
+    margin-bottom: 20px;
+}
+
+/* About Section Styling */
+.about-section {
+    margin-bottom: 30px;
+}
+
+/* Section Title */
+.about-section h3 {
+    font-size: 1.8rem;
+    color: #ac2bc0;
+    margin-bottom: 10px;
+}
+
+/* Section Text */
+.about-section p, .about-section ul {
+    font-size: 1.1rem;
+    color: #C1F6ED;
+    line-height: 1.6;
+}
+
+/* List Styling */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li strong {
+    color: #3FD0C9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,179 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(140deg, #02353C 40%, #ac2bc0 200%);
+    margin-top: 100px; /* Added space for sticky navbar */
+}
+
+/* Navbar Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1f2a44; /* Dark blue for the navbar */
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth-section {
+    display: flex;
+    align-items: center;
+}
+
+.auth-section button {
+    background-color: #2a8f97; /* Teal button for a modern touch */
+    color: #02353C;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button
+{
+    background-color: #2a8f97; /* Teal button for a modern touch */
+    color: #02353C;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.profile-icon {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-icon span {
+    font-size: 16px;
+    color: white;
+}
+
+.navbar a:hover, .auth-section button:hover {
+    background-color: #3b5f6a; /* Darker teal when hovered */
+}
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #2a8f97;
+    margin: 50px auto;
+}
+
+.image-section {
+    position: relative;
+    width: 50%; /* Fixed to 50% for balanced layout */
+    height: 100%; /* Full height */
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the section */
+}
+
+.form-section {
+    width: 50%;
+    padding: 60px;
+    background-color: #033538; /* Lighter background for the form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #8eb0d2; /* Darker shade of blue */
+    font-weight: 600;
+}
+
+.form-section p {
+    margin-bottom: 30px;
+    color: #698bb1; /* Soft grayish blue */
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.login-btn {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #2a8f97; /* Teal button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #3b5f6a; /* Darker teal for hover effect */
+}
+
+.form-footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.form-footer a {
+    color: #2a8f97; /* Matching the button color for links */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}

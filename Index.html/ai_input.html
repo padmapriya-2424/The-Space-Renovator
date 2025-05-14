@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Design Input</title>
+    <link rel="stylesheet" href="/css/ai_input.css">
+</head>
+<body>
+
+   
+      <form id="accessibleDesignForm">
+        <!-- Room Type -->
+        <label for="roomType">Room Type:</label>
+        <select id="roomType-accessible" name="roomType" required>
+          <option value="bedroom">Bedroom</option>
+          <option value="livingroom">Living Room</option>
+          <option value="kitchen">Kitchen</option>
+          <option value="bathroom">Bathroom</option>
+        </select>
+      
+        <!-- User's Disability Type -->
+        <label for="disabilityType">User's Disability Type:</label>
+        <select id="disabilityType" name="disabilityType" required>
+          <option value="wheelchairUser">Wheelchair User</option>
+          <option value="visuallyImpaired">Visually Impaired</option>
+          <option value="hearingImpaired">Hearing Impaired</option>
+          <option value="cognitiveDisabilities">Cognitive Disabilities</option>
+        </select>
+      
+        <!-- Assistive Features Required -->
+        <label for="assistiveFeatures">Assistive Features Required:</label>
+        <select id="assistiveFeatures" name="assistiveFeatures" multiple>
+          <option value="handrails">Handrails</option>
+          <option value="voiceControl">Voice Control</option>
+          <option value="smartHome">Smart Home Integration</option>
+          <option value="antiSlipFloors">Anti-Slip Flooring</option>
+          <option value="brailleSignage">Braille Signage</option>
+        </select>
+      
+        <!-- Budget Range -->
+        <label for="budget">Budget Range:</label>
+        <input type="text" id="budget-accessible" name="budget" required>
+      
+        <!-- Room Style Preference -->
+        <label for="style">Room Style Preference:</label>
+        <select id="style-accessible" name="style" required>
+          <option value="modern">Modern</option>
+          <option value="minimalist">Minimalist</option>
+          <option value="industrial">Industrial</option>
+          <option value="classic">Classic</option>
+        </select>
+      
+        <!-- Items Required -->
+        <label for="items">Items Required (Furniture & Decor):</label>
+        <select id="items-accessible" name="items" multiple>
+          <option value="adjustableBed">Adjustable Bed</option>
+          <option value="sofa">Sofa</option>
+          <option value="desk">Desk</option>
+          <option value="wardrobe">Wardrobe</option>
+          <option value="heightAdjustableTables">Height-Adjustable Tables</option>
+          <option value="sensorLights">Sensor-Activated Lights</option>
+        </select>
+      
+        <!-- Color Preferences -->
+        <label for="color">Color Preferences:</label>
+        <input type="color" id="color-accessible" name="color">
+      
+        <!-- Material Preferences -->
+        <label for="material">Material Preferences:</label>
+        <select id="material-accessible" name="material" required>
+          <option value="wood">Wood</option>
+          <option value="metal">Metal</option>
+          <option value="glass">Glass</option>
+          <option value="antiSlip">Anti-Slip Flooring</option>
+        </select>
+      
+        <!-- Eco-Friendly Option -->
+        <label>Eco-Friendly Option:</label>
+        <input type="radio" name="ecoFriendly" value="yes" required> Yes
+        <input type="radio" name="ecoFriendly" value="no"> No
+      
+        <button type="submit">Submit</button>
+      </form>
+      
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("accessibleDesignForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        window.location.href = "ai_design.html"; // Redirect to the next page
+    });
+});
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const userTypeSelect = document.getElementById("userType");
+    const forms = {
+        bachelor: document.getElementById("bachelorForm"),
+        family: document.getElementById("familyForm"),
+        universalDesign: document.getElementById("universalDesignForm"),
+        accessibleDesign: document.getElementById("accessibleDesignForm"),
+    };
+
+    function showSelectedForm() {
+        // Hide all forms
+        Object.values(forms).forEach(form => form.style.display = "none");
+
+        // Get selected value
+        const selectedValue = userTypeSelect.value;
+
+        // Show the selected form (if valid)
+        if (forms[selectedValue]) {
+            forms[selectedValue].style.display = "block";
+        }
+    }
+
+    // Run function when user selects an option
+    userTypeSelect.addEventListener("change", showSelectedForm);
+
+    // Run function on page load (if a selection exists)
+    showSelectedForm();
+});
+
+        </script>
+        
+    <script src="/js/ai_input.js"></script>
+</body>
+</html>

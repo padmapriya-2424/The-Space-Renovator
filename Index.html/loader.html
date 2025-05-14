@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Floor Plan</title>
+    <link rel="stylesheet" href="/css/loader.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div class="loader-container">
+        <h2>Processing Floor Plan...</h2>
+        <div class="loader"></div>
+        <p>Please wait while we analyze your floor plan.</p>
+    </div>
+
+    <script>
+        // Simulate processing time, then redirect to the next page
+        setTimeout(() => {
+            window.location.href = 'room_selection.html'; // Change this to the actual next screen
+        }, 4000);
+    </script>
+</body>
+</html>

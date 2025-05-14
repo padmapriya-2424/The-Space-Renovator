@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Design Summary</title>
+    <link rel="stylesheet" href="/css/details.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="final-summary">
+            <h2>Your Final Design</h2>
+
+            <!-- Design Summary Section -->
+            <div class="section summary">
+                <h3>Design Summary</h3>
+                <div class="details-container">
+                    <h2>Design Details</h2>
+                    
+                    <!-- Section for Design Information -->
+                    <div class="info-card">
+                        <h3 class="section-title">Room Type</h3>
+                        <p>Bedroom</p>
+                
+                        <h3 class="section-title">Room Style</h3>
+                        <p>Italian</p>
+                
+                        <h3 class="section-title">Color Combination</h3>
+                        <p>Blue & White</p>
+                
+                        <h3 class="section-title">Material Preferences</h3>
+                        <p>Wood, Glass</p>
+                    </div>
+                    
+                    <!-- Budget Summary -->
+                    <div class="budget-summary">
+                        <h3 class="section-title">Budget Breakdown</h3>
+                        <p>Total Estimated Budget: <span class="price">$4,000</span></p>
+                        
+                        <!-- Budget Progress Bar -->
+                        <div class="budget-progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button>Finalize Design</button>
+                </div>
+                
+                <div class="scrollable-section">
+                    <p><strong>Furniture:</strong> Sofa, Table, Lamp</p>
+                    <p><strong>Color Palette:</strong> #ff5733 (Custom)</p>
+                    <p><strong>Material:</strong> Wood</p>
+                    <p><strong>Eco-Friendly:</strong> Yes</p>
+                </div>
+            </div>
+
+            <!-- 3D Model or Image Preview -->
+            <div id="model-viewer">
+                <h3>3D Model Preview</h3>
+                <img src="path/to/3d-model.jpg" alt="3D Model" class="preview-image">
+            </div>
+
+            <!-- Cost Breakdown -->
+            <div class="section">
+                <h3>Cost Breakdown</h3>
+                <ul>
+                    <li>Sofa: $300</li>
+                    <li>Table: $150</li>
+                    <li>Lamp: $50</li>
+                    <li>Eco-Friendly Materials: $200</li>
+                    <li><strong>Total Cost: $1200</strong></li>
+                </ul>
+            </div>
+
+            <!-- Download Options -->
+            <div class="section download">
+                <h3>Download Your Design</h3>
+                <button id="download-pdf">Download PDF</button>
+                <button id="download-3d">Download 3D Model</button>
+                <button id="download-floorplan">Download Floor Plan</button>
+            </div>
+
+            <!-- Feedback Section -->
+            <div class="section feedback">
+                <h3>Provide Feedback</h3>
+                <textarea id="feedback" placeholder="Share your thoughts..."></textarea>
+                <button id="submit-feedback">Submit Feedback</button>
+            </div>
+
+            <button id="create-new">Design next Room</button>
+        </div>
+    </div>
+
+    <script src="/js/details.js"></script>
+</body>
+</html>

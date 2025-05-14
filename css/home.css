@@ -1,0 +1,445 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #02353C 60%, #ac2bc0);
+  color: #C1F6ED;
+  margin-top: 80px; /* Added space for sticky navbar */
+}
+
+
+/* Header (Navigation) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(195deg, #02353C 60%, #ac2bc0);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3FD0C9;
+}
+
+nav a {
+  color: #C1F6ED;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ac2bc0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #C1F6ED;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #E7EDC8;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #02353C;
+  background: #3FD0C9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #ac2bc0;
+  color: #C1F6ED;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+  background-color: #f7f9f7;
+  padding: 50px 20px;
+  text-align: center;
+}
+.features img{
+  height: 170px;
+  width: 170px;
+  border-radius: 20%;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #02353C;
+}
+
+.feature-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  width: 250px;
+  margin: 15px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+  font-size: 24px;
+  color: #3FD0C9;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #5a6a5c;
+  line-height: 1.5;
+}
+/* My Projects Section */
+#projects-container {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+#projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-item h3 {
+  color: #3FD0C9;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.project-item p {
+  color: #C1F6ED;
+  font-size: 14px;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+/* Empty Projects Message */
+#projects-list p {
+  font-size: 18px;
+  color: #C1F6ED;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#auth-section {
+  display: flex;
+  align-items: center;
+}
+
+#auth-section button {
+  background-color: #ac2bc0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Profile Icon Styles */
+#profile-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 20px; /* Adds spacing from other nav elements */
+}
+
+/* Profile Icon Styles */
+#profile-icon img {
+  width: 30px; /* Set the desired size */
+  height: 30px; /* Set the desired size */
+  border-radius: 50%; /* Keep it circular */
+  object-fit: cover; /* Ensure the image fits properly */
+  border: 2px solid #3FD0C9; /* Optional: Add a border */
+  transition: transform 0.2s ease-in-out; /* Optional: Add hover effect */
+}
+
+#profile-icon img:hover {
+  transform: scale(1.1); /* Subtle hover effect */
+}
+
+/* Profile Dropdown */
+#profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #02353C;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 200;
+}
+
+#profile-dropdown p {
+  color: #C1F6ED;
+  font-size: 16px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+#profile-dropdown button {
+  width: 100%;
+  background: #ac2bc0;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#profile-dropdown button:hover {
+  background: #9b2bc0;
+}
+
+/* Aligning profile icon with navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: #fff;
+  margin: 50px auto;
+}
+
+.image-section {
+  position: relative;
+  width: 50%;
+  background: url('/assets/modern.jpeg') no-repeat center center/cover;
+}
+
+.image-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 80px;
+  height: 100%;
+  background-color: #f2f4f1;
+  border-radius: 0 20px 20px 0;
+  z-index: 1;
+}
+
+.form-section {
+  width: 50%;
+  padding: 60px;
+  background-color: #f2f4f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  color: #2d4d3f;
+  font-weight: 600;
+}
+
+.form-section p {
+  margin-bottom: 30px;
+  color: #5a6a5c;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-btn {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #2d4d3f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #1c342a;
+}
+
+.form-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.form-footer a {
+  color: #2d4d3f;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+/* Personalized Section */
+.personalized-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.personalized-section h2 {
+  font-size: 2em;
+}
+
+.personalized-section .cta-button {
+  margin: 10px;
+}
+
+/* Explore AI Designs Section */
+.explore-ai-designs {
+  padding: 30px;
+  background-color: #2f645e;
+}
+
+.explore-ai-designs h2 {
+  text-align: center;
+}
+
+.design-category button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #02353C;
+  background: #3FD0C9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.design-category button:hover {
+  background: #ac2bc0;
+  color: #C1F6ED;
+}
+
+.design-thumbnails {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.design-thumbnails img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* AR Demo Section */
+.ar-demo {
+  text-align: center;
+  margin: 50px 0;
+}
+.ar-demo img{
+  height: 270px;
+  width: 270px;
+  border-radius: 20%;
+}
+
+

@@ -1,0 +1,163 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    background: linear-gradient(145deg, #02353C 60%, #ac2bc0);
+    color: #C1F6ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Sections */
+.section {
+    margin: 15px 0;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+select, input[type="color"], input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #02353C;
+    color: #C1F6ED;
+    border: 2px solid #C1F6ED;
+    transition: 0.3s;
+}
+
+select:focus, input[type="color"]:focus {
+    border-color: #ac2bc0;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #3FD0C9;
+    color: #02353C;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Design Preview */
+.design-preview {
+    width: 65%;
+    padding: 20px;
+}
+
+.design-preview h2 {
+    margin-bottom: 20px;
+}
+#view-in-ar {
+    background-color: #ff5733;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+}
+
+#view-in-ar:hover {
+    background-color: #e04e2b;
+}
+
+
+#model-viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-image {
+    width: 80%;
+    max-width: 500px;
+}
+
+.cost-breakdown {
+    margin-top: 30px;
+}
+
+.cost-breakdown h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#cost {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .design-preview {
+        width: 100%;
+    }
+}

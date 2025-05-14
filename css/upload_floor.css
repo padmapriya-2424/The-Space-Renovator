@@ -1,0 +1,192 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    background: linear-gradient(145deg, #02353C 60%, #ac2bc0);
+    color: #C1F6ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 60%;
+    max-width: 600px;
+}
+
+/* Headings */
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Option Buttons */
+.input-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-btn {
+    display:inline-flex;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+/* Input Button Styling */
+.input-btn {
+    background: #C1F6ED;
+    color: #02353C;
+}
+
+.input-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Button Size Variations */
+.small {
+    width: 200px;
+}
+
+.medium {
+    width: 160px;
+}
+
+.large {
+    width: 200px;
+}
+
+/* Next Button */
+#next-btn {
+    width: 200px;
+    display:flow-root;
+    border-radius: 25%;
+    margin: 20px auto;
+    background: #3FD0C9;
+    color: #02353C;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+#next-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Hide Elements Initially */
+.hidden {
+    display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .grid-layout {
+        flex-direction: column;
+    }
+}
+
+/* Image Preview Section */
+#image-preview-section {
+    margin-top: 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 60%;
+    max-width: 600px;
+    display: none; /* Initially hidden */
+}
+
+/* Heading */
+#image-preview-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #C1F6ED;
+}
+
+/* Image Styling */
+#floor-plan-preview {
+    display: block;
+    margin: 2%;
+    align-items: center;
+    max-width: 100%;
+    max-height: 500px;
+}
+
+
+#floor-plan-preview:hover {
+    transform: scale(1.05);
+}
+
+/* Canvas Styling
+
+#processed-canvas {
+    display: block;
+    margin: 20px 0;
+    /*border: 1px solid #ddd;
+    max-width: 100%;
+}
+ */
+
+/* Make sure the section is responsive */
+@media (max-width: 768px) {
+    #image-preview-section {
+        width: 80%;
+    }
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: radial-gradient(circle, #2EAF7D, transparent);
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+#image-preview-section {
+    display: none;
+    margin-top: 20px;
+}
+
+#floor-plan-preview {
+    max-width: 100%;
+    max-height: 500px;
+}

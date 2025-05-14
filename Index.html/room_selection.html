@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Plan Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #02353C;
+        }
+        .floor-plan-container {
+            position: relative;
+            width: 800px;
+        }
+        .floor-plan {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .room {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .room:hover, .room.selected {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid #2EAF7D;
+        }
+        /* Define each room position */
+        .bedroom-1 { top: 5%; left: 10%; width: 15%; height: 38%; }
+        .bedroom-3 { top: 47%; left: 9%; width: 15%; height: 38%; }
+        .bedroom-2 { top: 5%; left: 25%; width: 21%; height: 24%; }
+        .living-room { top: 47%; left: 45%; width: 22%; height: 40%; }
+        .kitchen { top: 20%; left: 47%; width: 20%; height: 25%; }
+    </style>
+</head>
+<body>
+    <div class="floor-plan-container">
+        <img src="/assets/floor_plan.png" alt="Floor Plan" class="floor-plan">
+        
+        <!-- Clickable Areas -->
+        <!-- Remove inline onclick attributes -->
+<div class="room bedroom-1" data-room="Bedroom 1"></div>
+<div class="room bedroom-2" data-room="Bedroom 2"></div>
+<div class="room bedroom-3" data-room="Bedroom 3"></div>
+<div class="room living-room" data-room="Living Room"></div>
+<div class="room kitchen" data-room="Kitchen"></div>
+
+
+    </div>
+
+    <script src="/js/room_selection.js"></script> <!-- Link to ai_input.js -->
+</body>
+</html>

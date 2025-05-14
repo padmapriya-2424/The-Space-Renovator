@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Floor Plan Analysis</title>
+    <link rel="stylesheet" href="/css/3d_floor.css">
+    <script defer src="/js/3d_floor.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>3D Floor Plan Analysis</h2>
+        <p>Select a room to start designing.</p>
+        <div class="floor-plan-container">
+            <canvas id="floorPlanCanvas"></canvas>
+            <div class="tooltip" id="tooltip">Click to select a room</div>
+        </div>
+        <div class="controls">
+            <button id="zoomIn">Zoom In</button>
+            <button id="zoomOut">Zoom Out</button>
+            <button id="confirmSelection">Confirm Room Selection</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    background: linear-gradient(145deg, #02353C 60%, #ac2bc0);
+    color: #C1F6ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 60%;
+    max-width: 600px;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 70%;
+    margin-right: 10px;
+}
+
+.input-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    background: #C1F6ED;
+    color: #02353C;
+}
+
+.input-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Search Results */
+#search-result {
+    margin-top: 20px;
+}
+
+#results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Result Card */
+.result-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.result-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    font-size: 16px;
+    color: #C1F6ED;
+}
+
+/* Next Button */
+#next-btn {
+    display: block;
+    margin: 20px auto;
+    background: #3FD0C9;
+    color: #02353C;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#next-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Background Effects */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: radial-gradient(circle, #2EAF7D, transparent);
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}

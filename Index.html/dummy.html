@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Home Design Form</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Home Design Preferences</h2>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+            <div class="step active">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+            <div class="step">4</div>
+        </div>
+
+        <form id="multiStepForm">
+            <!-- Step 1: New Building or Renovation -->
+            <div class="form-step active">
+                <label>Are you designing for a new building or renovation?</label>
+                <select id="buildingType">
+                    <option value="new">New Building</option>
+                    <option value="renovation">Renovation</option>
+                </select>
+                <div id="uploadImagesSection" class="hidden">
+                    <label>Upload current images of your home:</label>
+                    <input type="file" multiple accept="image/*">
+                </div>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 2: Floor Plan Selection -->
+            <div class="form-step">
+                <label>How would you like to provide your floor plan?</label>
+                <select id="floorPlanOption">
+                    <option value="upload">Upload Floor Plan (Image/PDF)</option>
+                    <option value="search">Search Apartment Floor Plan</option>
+                </select>
+                <div id="uploadFloorPlan" class="hidden">
+                    <label>Upload Floor Plan:</label>
+                    <input type="file" accept="image/*,application/pdf">
+                </div>
+                <div id="searchFloorPlan" class="hidden">
+                    <label>Search for your apartment's floor plan:</label>
+                    <input type="text" placeholder="Enter Name & Address">
+                </div>
+                <button type="button" class="prev-btn">Back</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 3: Room Selection -->
+            <div class="form-step">
+                <label>Select Rooms for Design:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="livingRoom"><label for="livingRoom">Living Room</label>
+                    <input type="checkbox" id="bedroom"><label for="bedroom">Bedroom</label>
+                    <input type="checkbox" id="kitchen"><label for="kitchen">Kitchen</label>
+                    <input type="checkbox" id="bathroom"><label for="bathroom">Bathroom</label>
+                </div>
+                <button type="button" class="prev-btn">Back</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 4: User Type & Preferences -->
+            <div class="form-step">
+                <label>Choose User Type:</label>
+                <select id="userType">
+                    <option value="bachelor">Bachelor</option>
+                    <option value="family">Family</option>
+                    <option value="universal">Universal Design</option>
+                    <option value="specialNeeds">Specially Abled People</option>
+                </select>
+
+                <div id="additionalInputs" class="hidden"></div>
+
+                <button type="button" class="prev-btn">Back</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

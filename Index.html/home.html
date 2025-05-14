@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Space Renovator - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+  <header>
+    <div class="logo">The Space Renovator</div>
+    <nav>
+      <a href="/Index.html/home.html">Home</a>
+      <a href="/Index.html/about.html">About</a>
+      <a href="/Index.html/explore_design.html">Explore</a>
+      <a href="/Index.html/contact.html">Contact</a>
+      <button id="login-btn" style="display: inline-block;
+      padding: 8px 20px;
+      font-size: 18px;
+      color: #02353C;
+      background: #3FD0C9;
+      border: none;
+      margin-right: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;" onclick="redirectToLogin()">Login</button>
+      <button id="signup-btn" style="display: inline-block;
+      padding: 8px 20px;
+      font-size: 18px;
+      color: #02353C;
+      background: #3FD0C9;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;" onclick="redirectToSignup()">Sign Up</button>
+      <!-- Profile Icon (hidden initially) -->
+<div id="profile-icon" style="display:none;" onclick="toggleProfileDropdown()">
+  <img src="/assets/profile-icon.png" alt="Profile" />
+</div>
+
+<!-- Dropdown for Profile Details (hidden initially) -->
+<div id="profile-dropdown" style="display:none;">
+  <p id="username"></p> <!-- User's name or email -->
+  <button onclick="logout()">Logout</button> <!-- Logout Button -->
+</div>
+
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bringing Your Design Dreams to Life</h1>
+    <p>AI-powered home design with AR visualization and smart recommendations.</p>
+    <button class="cta-button" onclick="startDesign()">Start Designing</button>
+  </section>
+  
+
+  <!--<section class="personalized-section" style="display: none;">
+    <h2>Welcome, <span id="personalized-name">User</span></h2>
+    <p>Explore our latest AI-generated designs!</p>
+    <button class="cta-button" onclick="startNewProject()">Start New Project</button>
+    <button class="cta-button" onclick="exploreDesigns()">Explore Designs</button>
+  </section>-->
+  <section class="my-projects" style="display: none;">
+    <h2>Your Projects</h2>
+    <div id="projects-list">
+      <!-- Dynamically add user's projects here -->
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-items">
+      <div class="feature-item">
+        <h3>AI-Powered Design</h3>
+        <img src="/assets/planing.jpeg" alt="ai_design">
+        <p>Generate customized home designs based on your preferences, budget, and needs, including eco-friendly options.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Inclusive Design</h3>
+      
+        <img src="/assets/universal-home-design.webp" alt="inclusive_design">
+        <p>Design homes that cater to everyone, including specially-abled individuals, with unique accessibility features.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Augmented Reality (AR)</h3>
+        <img src="/assets/ar view.jpeg" alt="ar_design">
+        <p>Visualize your designs in real-time with AR to see how they will look in your space.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="explore-ai-designs">
+    <h2>Explore AI Designs</h2>
+    <div class="design-category">
+      <button class="cta-button" onclick="exploreDesigns()">Popular</button>
+      <button class="cta-button" onclick="exploreDesigns()">Eco-Friendly</button>
+      <button class="cta-button" onclick="exploreDesigns()">Budget-Friendly</button>
+    </div>
+    <div class="design-thumbnails">
+      <img src="/assets/ai designed.jpeg" alt="Design 2">
+      <img src="/assets/planing 1.jpeg" alt="Design 1">
+      <img src="/assets/renovate.jpeg" alt="Design 2">
+    </div>
+  </section>
+
+  <section class="ar-demo">
+    <h2>Visualize in Augmented Reality</h2>
+    <img src="/assets/ar view 1.jpeg" alt="ar_design">
+    <p>Click below to visualize the designs in real-time using AR.</p>
+    <button class="cta-button" onclick="viewInAR()">View in AR</button>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 The Space Renovator. All Rights Reserved.</p>
+  </footer>
+
+  <script src="/js/home.js"></script>
+</body>
+</html>

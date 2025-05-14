@@ -1,0 +1,162 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Styling */
+body {
+    background: linear-gradient(145deg, #02353C 60%, #ac2bc0);
+    color: #C1F6ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    height: 80%;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* Heading */
+h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Canvas Area */
+#floorplan-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+canvas {
+    border: 2px solid #3FD0C9;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Zoom Controls */
+.controls {
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Primary Buttons */
+.zoom-in, .zoom-out {
+    background: #3FD0C9;
+    color: #02353C;
+}
+
+.zoom-in:hover, .zoom-out:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Room Highlighting */
+.room {
+    fill: rgba(63, 208, 201, 0.4);
+    stroke: #3FD0C9;
+    stroke-width: 2;
+    transition: 0.3s;
+}
+
+.room:hover {
+    fill: rgba(172, 43, 192, 0.5); /* Soft purple highlight */
+    stroke: #7422A7;
+    stroke-width: 3;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #C1F6ED;
+    text-align: center;
+    padding: 6px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Next Button */
+#next-btn {
+    display: block;
+    margin: 20px auto;
+    background: #3FD0C9;
+    color: #02353C;
+}
+
+#next-btn:hover {
+    background: #ac2bc0;
+    color: #C1F6ED;
+}
+
+/* Floating Animations */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: radial-gradient(circle, #2EAF7D, transparent);
+    animation: float 10s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 30px;
+    }
+}
